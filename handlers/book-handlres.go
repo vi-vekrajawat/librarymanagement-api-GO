@@ -43,7 +43,6 @@ func GetAll (w http.ResponseWriter , r *http.Request){
 	var books []models.Books
     cursor,err := collection.Find(ctx,bson.M{})
 	
-
 	if err!=nil{
 		http.Error(w,err.Error(),500)
 	}
